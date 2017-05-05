@@ -48,6 +48,7 @@ class Site(Site):
         # yield 'lino.modlib.users'
         yield 'lino_amici.lib.contacts'
         yield 'lino_xl.lib.online.users'
+        yield 'lino.modlib.plausibility'
         yield 'lino_xl.lib.cal'
         yield 'lino_xl.lib.extensible'
         yield 'lino_xl.lib.addresses'

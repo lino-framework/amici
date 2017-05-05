@@ -135,7 +135,7 @@ class PersonDetail(PersonDetail):
 
     more = dd.Panel("""
     id:5 language:10 url birth_date age
-    remarks
+    remarks lists.MembersByPartner
     """, label=_("More"))
 
 
@@ -153,7 +153,7 @@ class CompanyDetail(CompanyDetail):
 
     contact = dd.Panel("""
     address_box
-    remarks 
+    remarks lists.MembersByPartner
     """, label=_("Contact"))
 
     contact_box = dd.Panel("""
