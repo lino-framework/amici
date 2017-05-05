@@ -53,6 +53,9 @@ class Person(Person, Commentable, AddressOwner):
             'company', models.ForeignKey(
                 'contacts.Company', blank=True, null=True))
         fields.setdefault(
+            'function', models.ForeignKey(
+                'contacts.RoleType', blank=True, null=True))
+        fields.setdefault(
             'topic', models.ForeignKey(
                 'topics.Topic', blank=True, null=True))
         return super(Person, cls).get_parameter_fields(**fields)
@@ -61,17 +64,24 @@ class Person(Person, Commentable, AddressOwner):
     def get_simple_parameters(cls):
         rv = super(Person, cls).get_simple_parameters()
         rv.add('company')
+        rv.add('function')
         rv.add('topic')
         return rv
     
     @classmethod
     def add_param_filter(cls, qs, lookup_prefix='', company=None,
+                         function=None,
                          topic=None, **kwargs):
         qs = super(Person, cls).add_param_filter(qs, **kwargs)
         if company:
             fkw = dict()
             wanted = company.whole_clan()
             fkw[lookup_prefix + 'rolesbyperson__company__in'] = wanted
+            qs = qs.filter(**fkw)
+        
+        if function:
+            fkw = dict()
+            fkw[lookup_prefix + 'rolesbyperson__type'] = function
             qs = qs.filter(**fkw)
         
         if topic:
@@ -178,4 +188,4 @@ class CompanyDetail(CompanyDetail):
 Companies.set_detail_layout(CompanyDetail())
 Persons.set_detail_layout(PersonDetail())
 Person.column_names = 'last_name first_name gsm email city *'
-Persons.params_layout = 'observed_event start_date end_date topic company'
+Persons.params_layout = 'observed_event start_date end_date company function topic'
