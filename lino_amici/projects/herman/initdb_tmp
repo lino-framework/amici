@@ -1,2 +1,2 @@
-django-admin.py prep --noinput --traceback --settings=lino_local.herman.settings.memory
+django-admin.py prep --noinput --traceback --settings=lino_amici.projects.herman.settings.memory
 

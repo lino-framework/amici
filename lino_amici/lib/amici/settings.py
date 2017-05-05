@@ -67,7 +67,7 @@ class Site(Site):
         yield 'lino_xl.lib.blogs'
 
         # yield 'lino.modlib.changes'
-        yield 'lino.modlib.notify'
+        # yield 'lino.modlib.notify'
         # yield 'lino.modlib.uploads'
         # yield 'lino_xl.lib.outbox'
         yield 'lino_xl.lib.excerpts'
