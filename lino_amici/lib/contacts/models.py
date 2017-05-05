@@ -135,12 +135,14 @@ class PersonDetail(PersonDetail):
 
     more = dd.Panel("""
     id:5 language:10 url birth_date age
-    remarks lists.MembersByPartner
+    remarks lists.MembersByPartner plausibility.ProblemsByOwner
     """, label=_("More"))
 
 
 class CompaniesByCompany(Companies):
+    label = _("Child organisations")
     master_key = 'parent'
+    column_names = 'name_column email id *'
 
     
 class CompanyDetail(CompanyDetail):
@@ -163,7 +165,7 @@ class CompanyDetail(CompanyDetail):
 
     more = dd.Panel("""
     id:5 language:10 parent
-    CompaniesByCompany
+    CompaniesByCompany plausibility.ProblemsByOwner
     """, label=_("More"))
 
     
