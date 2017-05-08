@@ -26,6 +26,7 @@ class Site(Site):
     # project_model = 'tickets.Project'
     # project_model = 'deploy.Milestone'
     textfield_format = 'html'
+    custom_layouts_module = 'lino_amici.lib.amici.custom_layouts'
     user_types_module = 'lino_amici.lib.amici.user_types'
     workflows_module = 'lino_amici.lib.amici.workflows'
     obj2text_template = "**{0}**"
@@ -99,6 +100,8 @@ class Site(Site):
         self.plugins.addresses.configure(
             partner_model='contacts.Person')
         self.plugins.addresses.configure(
+            partner_model='contacts.Person')
+        self.plugins.cal.configure(
             partner_model='contacts.Person')
         # self.plugins.faculties.configure(
         #     demander_model='tickets.Ticket')
