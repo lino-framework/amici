@@ -116,6 +116,10 @@ class Site(Site):
             user, action=a, label=_("My settings"))
         
 
+        tb.add_action(
+            self.actors.blogs.MyEntries.insert_action,
+            label=_("New blog entry"))
+
 
 # the following line should not be active in a checked-in version
 #~ DATABASES['default']['NAME'] = ':memory:'
