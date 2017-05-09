@@ -20,7 +20,8 @@ The ``lino-amici`` package
 .. image:: https://img.shields.io/pypi/l/lino-noi.svg
     :target: https://pypi.python.org/pypi/lino-noi/
 
-Lino Amici is a customizable contact management system for families.
+Lino Amici is a customizable 
+Lino application for managing family contacts.
 
 - The central project homepage is http://amici.lino-framework.org
 
