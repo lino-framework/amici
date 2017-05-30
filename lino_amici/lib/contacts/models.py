@@ -116,7 +116,7 @@ class PersonDetail(PersonDetail):
 
     general = dd.Panel("""
     overview contact_box
-    contacts.RolesByPerson:30 comments.CommentsByRFC:30
+    contacts.RolesByPerson:30 lists.MembersByPartner comments.CommentsByRFC:30
     """, label=_("General"))
 
     contact_box = dd.Panel("""
@@ -145,7 +145,7 @@ class PersonDetail(PersonDetail):
 
     more = dd.Panel("""
     id:5 language:10 url birth_date age
-    remarks lists.MembersByPartner plausibility.ProblemsByOwner
+    remarks  plausibility.ProblemsByOwner
     """, label=_("More"))
 
 
