@@ -197,7 +197,7 @@ class Migrator(Migrator):
         # bv2kw = globals_dict['bv2kw']
         new_content_type_id = globals_dict['new_content_type_id']
         # cal_EventType = resolve_model("cal.EventType")
-        # users_User = resolve_model("users.User")
+        # auth.User = resolve_model("users.User")
         votes_Vote = rt.models.votes.Vote
         tickets_Ticket = rt.models.tickets.Ticket
 

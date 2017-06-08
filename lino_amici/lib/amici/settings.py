@@ -46,9 +46,9 @@ class Site(Site):
         # yield 'lino.modlib.bootstrap3'
         # yield 'lino.modlib.gfks'
         # yield 'lino.modlib.system'
-        # yield 'lino.modlib.users'
+        # yield 'lino.modlib.auth'
         yield 'lino_amici.lib.contacts'
-        yield 'lino_xl.lib.online.users'
+        yield 'lino_xl.lib.online.auth'
         yield 'lino.modlib.plausibility'
         yield 'lino_xl.lib.cal'
         yield 'lino_xl.lib.extensible'
@@ -114,7 +114,7 @@ class Site(Site):
         tb.add_action(self.actors.contacts.Persons)
         tb.add_action(self.actors.contacts.Companies)
 
-        a = self.actors.users.MySettings.default_action
+        a = self.actors.auth.MySettings.default_action
         tb.add_instance_action(
             user, action=a, label=_("My settings"))
         
