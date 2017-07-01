@@ -111,16 +111,16 @@ class Site(Site):
 
     def setup_quicklinks(self, user, tb):
         super(Site, self).setup_quicklinks(user, tb)
-        tb.add_action(self.actors.contacts.Persons)
-        tb.add_action(self.actors.contacts.Companies)
+        tb.add_action(self.models.contacts.Persons)
+        tb.add_action(self.models.contacts.Companies)
 
-        a = self.actors.users.MySettings.default_action
+        a = self.models.users.MySettings.default_action
         tb.add_instance_action(
             user, action=a, label=_("My settings"))
         
 
         tb.add_action(
-            self.actors.blogs.MyEntries.insert_action,
+            self.models.blogs.MyEntries.insert_action,
             label=_("New blog entry"))
 
 
