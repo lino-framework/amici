@@ -24,4 +24,12 @@ block, otherwise we use the more widely supported symbols from
 # from lino_noi.lib.tickets.workflows import *
 from lino_xl.lib.cal.workflows.voga import *
 # from lino_xl.lib.courses.workflows import *
+from lino_xl.lib.contacts.roles import ContactsStaff
+
+from lino.api import dd, rt
+lib = rt.models
+for m in (lib.contacts.Person, lib.contacts.Company, lib.countries.Place):
+    #~ print repr(m)
+    m.define_action(merge_row=dd.MergeAction(
+        m, required_roles=set([ContactsStaff])))
 

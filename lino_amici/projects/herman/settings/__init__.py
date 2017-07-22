@@ -32,6 +32,8 @@ class Site(Site):
             use_dbf_py=True,
             siteconfig_accounts={},
             timloader_module = 'lino_xl.lib.tim2lino.timloader_herman')
+        self.plugins.plausibility.configure(responsible_user='tim')
+        
 
     def get_installed_apps(self):
         yield super(Site, self).get_installed_apps()
