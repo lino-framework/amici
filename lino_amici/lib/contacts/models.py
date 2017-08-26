@@ -28,6 +28,7 @@ PartnerDetail.contact_box = dd.Panel("""
     """, label=_("Contact"))
 
 from lino_xl.lib.addresses.mixins import AddressOwner
+from lino_xl.lib.phones.mixins import ContactDetailsOwner
 
 @dd.python_2_unicode_compatible
 class Person(Person, Commentable, AddressOwner):
@@ -45,6 +46,7 @@ class Person(Person, Commentable, AddressOwner):
     def get_overview_elems(self, ar):
         elems = super(Person, self).get_overview_elems(ar)
         elems += AddressOwner.get_overview_elems(self, ar)
+        elems += ContactDetailsOwner.get_overview_elems(self, ar)
         return elems
 
     @classmethod
@@ -109,13 +111,19 @@ class Company(Company, Hierarchical, Commentable):
         abstract = dd.is_abstract_model(__name__, 'Company')
         
 
+    def get_overview_elems(self, ar):
+        elems = super(Company, self).get_overview_elems(ar)
+        # elems += AddressOwner.get_overview_elems(self, ar)
+        elems += ContactDetailsOwner.get_overview_elems(self, ar)
+        return elems
+
 
 class PersonDetail(PersonDetail):
     
     main = "general #contact #career links more"
 
     general = dd.Panel("""
-    overview contact_box phones.ContactDetailsByPartner
+    overview contact_box #phones.ContactDetailsByPartner
     contacts.RolesByPerson:30 lists.MembersByPartner:30 comments.CommentsByRFC:30
     """, label=_("General"))
 
@@ -156,14 +164,14 @@ class CompanyDetail(CompanyDetail):
     main = "general contact more"
 
     general = dd.Panel("""
-    overview general_middle phones.ContactDetailsByPartner
+    overview general_middle #phones.ContactDetailsByPartner
     contacts.RolesByCompany:30 comments.CommentsByRFC:30
     """, label=_("General"))
 
     general_middle = """
-    language:10 
+    type
     parent
-    id:5
+    language:10 id:6
     """
     contact = dd.Panel("""
     # address_box
