@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2015-2017 Luc Saffre
+# Copyright 2017 Luc Saffre
 # License: BSD (see file COPYING for details)
 """Database models for this plugin.
 
@@ -115,14 +115,14 @@ class PersonDetail(PersonDetail):
     main = "general #contact #career links more"
 
     general = dd.Panel("""
-    overview contact_box
+    overview contact_box phones.ContactDetailsByPartner
     contacts.RolesByPerson:30 lists.MembersByPartner:30 comments.CommentsByRFC:30
     """, label=_("General"))
 
     contact_box = dd.Panel("""
-    name_box
-    email 
-    gsm phone
+    last_name first_name:15 
+    gender #title:10 language:10 
+    birth_date age:10 id:6
     """)  #, label=_("Contact"))
 
     # contact = dd.Panel("""
@@ -141,10 +141,7 @@ class PersonDetail(PersonDetail):
     households.MembersByPerson:20 households.SiblingsByPerson:50
     """, label=_("Links"))
 
-    name_box = "last_name first_name:15 gender #title:10"
-
     more = dd.Panel("""
-    id:5 language:10 url birth_date age
     remarks  plausibility.ProblemsByOwner
     """, label=_("More"))
 
@@ -159,22 +156,21 @@ class CompanyDetail(CompanyDetail):
     main = "general contact more"
 
     general = dd.Panel("""
-    overview contact_box 
+    overview general_middle phones.ContactDetailsByPartner
     contacts.RolesByCompany:30 comments.CommentsByRFC:30
     """, label=_("General"))
 
+    general_middle = """
+    language:10 
+    parent
+    id:5
+    """
     contact = dd.Panel("""
-    address_box
+    # address_box
     remarks lists.MembersByPartner
     """, label=_("Contact"))
 
-    contact_box = dd.Panel("""
-    email:40 url
-    gsm phone
-    """, label=_("Contact"))
-
     more = dd.Panel("""
-    id:5 language:10 parent
     CompaniesByCompany plausibility.ProblemsByOwner
     """, label=_("More"))
 

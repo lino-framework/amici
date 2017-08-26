@@ -19,6 +19,7 @@ Content
    :maxdepth: 1
 
    guide/index
+   specs/index
    changes
    
 

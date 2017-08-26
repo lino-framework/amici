@@ -23,6 +23,9 @@ class PackagesTests(TestCase):
     def test_packages(self):
         self.run_packages_test(SETUP_INFO['packages'])
 
-
+class SpecsTests(TestCase):
+    
+    def test_overview(self):
+        self.run_simple_doctests('docs/specs/overview.rst')
 
 
