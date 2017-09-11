@@ -50,7 +50,7 @@ class Person(Person, Commentable, AddressOwner):
         return elems
 
     @classmethod
-    def get_parameter_fields(cls, **fields):
+    def setup_parameters(cls, fields):
         fields.setdefault(
             'company', models.ForeignKey(
                 'contacts.Company', blank=True, null=True))
@@ -60,7 +60,7 @@ class Person(Person, Commentable, AddressOwner):
         fields.setdefault(
             'topic', models.ForeignKey(
                 'topics.Topic', blank=True, null=True))
-        return super(Person, cls).get_parameter_fields(**fields)
+        super(Person, cls).setup_parameters(fields)
     
     @classmethod
     def get_simple_parameters(cls):
