@@ -1,4 +1,4 @@
-from lino.invlib.ns import ns
+from atelier.invlib.ns import ns
 ns.setup_from_tasks(
     globals(), "lino_amici",
     languages="en de fr et".split(),
@@ -7,5 +7,5 @@ ns.setup_from_tasks(
     revision_control_system='git',
     locale_dir='lino_amici/lib/amici/locale',
     demo_projects=[
-        'lino_amici.projects.herman.settings.demo'],
+        'lino_amici/projects/herman'],
 )
