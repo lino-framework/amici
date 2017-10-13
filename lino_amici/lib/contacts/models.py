@@ -27,11 +27,11 @@ PartnerDetail.contact_box = dd.Panel("""
     gsm #fax
     """, label=_("Contact"))
 
-from lino_xl.lib.addresses.mixins import AddressOwner
-from lino_xl.lib.phones.mixins import ContactDetailsOwner
+# from lino_xl.lib.addresses.mixins import AddressOwner
+# from lino_xl.lib.phones.mixins import ContactDetailsOwner
 
 @dd.python_2_unicode_compatible
-class Person(Person, Commentable, AddressOwner):
+class Person(Person, Commentable):
     
     class Meta(Person.Meta):
         app_label = 'contacts'
@@ -43,11 +43,11 @@ class Person(Person, Commentable, AddressOwner):
         words.append(self.last_name)
         return join_words(*words)
 
-    def get_overview_elems(self, ar):
-        elems = super(Person, self).get_overview_elems(ar)
-        elems += AddressOwner.get_overview_elems(self, ar)
-        elems += ContactDetailsOwner.get_overview_elems(self, ar)
-        return elems
+    # def get_overview_elems(self, ar):
+    #     elems = super(Person, self).get_overview_elems(ar)
+    #     elems += AddressOwner.get_overview_elems(self, ar)
+    #     elems += ContactDetailsOwner.get_overview_elems(self, ar)
+    #     return elems
 
     @classmethod
     def setup_parameters(cls, fields):
@@ -111,11 +111,11 @@ class Company(Company, Hierarchical, Commentable):
         abstract = dd.is_abstract_model(__name__, 'Company')
         
 
-    def get_overview_elems(self, ar):
-        elems = super(Company, self).get_overview_elems(ar)
-        # elems += AddressOwner.get_overview_elems(self, ar)
-        elems += ContactDetailsOwner.get_overview_elems(self, ar)
-        return elems
+    # def get_overview_elems(self, ar):
+    #     elems = super(Company, self).get_overview_elems(ar)
+    #     # elems += AddressOwner.get_overview_elems(self, ar)
+    #     elems += ContactDetailsOwner.get_overview_elems(self, ar)
+    #     return elems
 
 
 class PersonDetail(PersonDetail):
