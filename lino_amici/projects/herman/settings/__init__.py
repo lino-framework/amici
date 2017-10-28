@@ -35,7 +35,7 @@ if False: # tim2lino usage example
                 use_dbf_py=True,
                 siteconfig_accounts={},
                 timloader_module = 'lino_xl.lib.tim2lino.timloader_herman')
-            self.plugins.plausibility.configure(responsible_user='tim')
+            self.plugins.checkdata.configure(responsible_user='tim')
 
 
         def get_installed_apps(self):
