@@ -19,7 +19,7 @@ PartnerDetail.address_box = dd.Panel("""
     #addr1
     #street_prefix street:25 street_no street_box
     #addr2
-    """, label=_("Address"))
+    """)  # , label=_("Address"))
 
 PartnerDetail.contact_box = dd.Panel("""
     url
@@ -164,14 +164,14 @@ class CompanyDetail(CompanyDetail):
     main = "general contact more"
 
     general = dd.Panel("""
-    overview general_middle #phones.ContactDetailsByPartner
+    overview general_middle address_box 
     contacts.RolesByCompany:30 comments.CommentsByRFC:30
     """, label=_("General"))
 
     general_middle = """
-    type
+    id:6
+    language:10 
     parent
-    language:10 id:6
     """
     contact = dd.Panel("""
     # address_box
