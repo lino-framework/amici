@@ -7,7 +7,8 @@
 SETUP_INFO = dict(
     name='lino-amici',
     version='17.10.0',
-    install_requires=['lino-xl'],
+    install_requires=['lino-xl', 'vobject'],
+
     # tests_require=['pytest', 'mock'],
     test_suite='tests',
     description=("A Lino application for managing family contacts"),

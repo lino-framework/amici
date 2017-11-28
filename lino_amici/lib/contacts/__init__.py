@@ -17,3 +17,5 @@ class Plugin(Plugin):
     
     extends_models = ['Person', 'Company']
 
+    use_vcard_export = True
+    
