@@ -17,6 +17,7 @@ from lino_xl.lib.courses.roles import CoursesUser
 from lino_xl.lib.blogs.roles import BlogsReader
 from lino.modlib.office.roles import OfficeStaff, OfficeUser
 from lino.modlib.checkdata.roles import CheckdataUser
+from lino_xl.lib.cal.roles import GuestOperator
 
 from lino.modlib.comments.roles import CommentsUser, CommentsStaff
 from lino_xl.lib.tickets.roles import Triager, TicketsStaff
@@ -29,7 +30,7 @@ from lino.modlib.users.choicelists import UserTypes
 from django.utils.translation import ugettext_lazy as _
 
 
-class EndUser(OfficeUser, BlogsReader, CheckdataUser):
+class EndUser(OfficeUser, GuestOperator, BlogsReader, CheckdataUser):
     """An **end user** is somebody who uses our database, but won't work
     on it.
 
