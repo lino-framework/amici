@@ -17,6 +17,7 @@ from lino_xl.lib.courses.roles import CoursesUser
 from lino_xl.lib.blogs.roles import BlogsReader
 from lino.modlib.office.roles import OfficeStaff, OfficeUser
 from lino.modlib.checkdata.roles import CheckdataUser
+from lino.modlib.about.roles import SiteSearcher
 from lino_xl.lib.cal.roles import GuestOperator
 
 from lino.modlib.comments.roles import CommentsUser, CommentsStaff
@@ -38,7 +39,7 @@ class EndUser(OfficeUser, GuestOperator, BlogsReader, CheckdataUser):
     pass
 
 
-class Collector(EndUser, ExcerptsUser, ContactsUser):
+class Collector(EndUser, ExcerptsUser, ContactsUser, SiteSearcher):
     """A **collector** is somebody who collects data into the database.
 
     """
