@@ -5,7 +5,7 @@
 
 """
 
-from lino.api import dd, _
+from lino.api import dd, rt, _
 from lino.utils import join_words
 from lino.mixins import  Hierarchical
 
@@ -43,6 +43,16 @@ class Person(Person, Commentable):
         words.append(self.last_name)
         return join_words(*words)
 
+    def get_address_parent(self):
+        p = super(Person, self).get_address_parent()
+        if p is None:
+            Member = rt.models.households.Member
+            try:
+                return Member.objects.get(
+                    person=self, primary=True).household
+            except Member.DoesNotExist:
+                pass
+        
     # def get_overview_elems(self, ar):
     #     elems = super(Person, self).get_overview_elems(ar)
     #     elems += AddressOwner.get_overview_elems(self, ar)
