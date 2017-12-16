@@ -29,17 +29,15 @@ SETUP_INFO = dict(
 .. image:: https://img.shields.io/pypi/l/lino-noi.svg
     :target: https://pypi.python.org/pypi/lino-noi/
 
-Lino Amici is a customizable 
-Lino application for managing family contacts.
+Lino Amici is a customizable Lino application for managing family
+contacts.  It is currently a submarine project, used only by its
+author and therefore poorly documented.
 
 - The central project homepage is http://amici.lino-framework.org
 
-- Technical documentation, including demo projects, API and tested
-  specs see http://www.lino-framework.org/specs/amici
-
 - For *introductions* and *commercial information* about Lino Amici
   please see `www.saffre-rumma.net
-  <http://www.saffre-rumma.net/noi/>`__.
+  <http://www.saffre-rumma.net>`__.
 
 
 """,
