@@ -104,6 +104,9 @@ class Site(Site):
             partner_model='contacts.Person')
         self.plugins.cal.configure(
             partner_model='contacts.Person')
+        self.plugins.contacts.configure(
+            with_roles_history=True)
+
         # self.plugins.faculties.configure(
         #     demander_model='tickets.Ticket')
         # self.plugins.tickets.configure(
