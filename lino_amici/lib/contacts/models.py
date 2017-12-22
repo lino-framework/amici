@@ -134,7 +134,7 @@ class PersonDetail(PersonDetail):
 
     general = dd.Panel("""
     overview contact_box #phones.ContactDetailsByPartner
-    contacts.RolesByPerson:30 lists.MembersByPartner:30 comments.CommentsByRFC:30
+    contacts.RolesByPerson:30 lists.MembersByPartner:30 uploads.UploadsByController:20
     """, label=_("General"))
 
     contact_box = dd.Panel("""
@@ -161,6 +161,7 @@ class PersonDetail(PersonDetail):
 
     more = dd.Panel("""
     remarks  checkdata.ProblemsByOwner
+    comments.CommentsByRFC:30
     """, label=_("More"))
 
 
@@ -175,7 +176,7 @@ class CompanyDetail(CompanyDetail):
 
     general = dd.Panel("""
     overview general_middle address_box 
-    contacts.RolesByCompany:30 comments.CommentsByRFC:30
+    contacts.RolesByCompany:30 lists.MembersByPartner:30 uploads.UploadsByController:20
     """, label=_("General"))
 
     general_middle = """
@@ -185,11 +186,12 @@ class CompanyDetail(CompanyDetail):
     """
     contact = dd.Panel("""
     # address_box
-    remarks lists.MembersByPartner
+    remarks 
     """, label=_("Contact"))
 
     more = dd.Panel("""
     CompaniesByCompany checkdata.ProblemsByOwner
+    comments.CommentsByRFC
     """, label=_("More"))
 
     
