@@ -16,6 +16,7 @@ from lino_amici.lib.amici.settings import *
 
 class Site(Site):
     languages = 'en fr'
+    # languages = 'en de fr et'
 
 if False: # tim2lino usage example
 
