@@ -33,3 +33,4 @@ from lino_xl.lib.cal.workflows.voga import *
 #     m.define_action(merge_row=dd.MergeAction(
 #         m, required_roles=set([ContactsStaff])))
 
+
