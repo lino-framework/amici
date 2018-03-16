@@ -18,7 +18,6 @@ from __future__ import unicode_literals
 import datetime
 
 from django.conf import settings
-from django.utils.timezone import make_aware
 
 from lino.api import dd, rt
 from lino.utils.djangotest import TestCase
