@@ -37,7 +37,7 @@ class TestCase(TestCase):
         self.assertEqual(settings.SERVER_EMAIL, 'root@localhost')
         
     def test_insert_person(self):
-        # ContentType = rt.modules.contenttypes.ContentType
+        # ContentType = rt.models.contenttypes.ContentType
         # Person = rt.models.contacts.Person
         Partner = rt.models.contacts.Partner
         ContactDetail = rt.models.phones.ContactDetail

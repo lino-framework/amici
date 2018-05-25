@@ -19,7 +19,7 @@ Lino Amici Overview
    :depth: 2
 
 
->>> UserTypes = rt.actors.users.UserTypes
+>>> UserTypes = rt.models.users.UserTypes
 
 >>> rt.show(UserTypes)
 ======= =========== ================= ================================================
