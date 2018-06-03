@@ -1,6 +1,6 @@
 from lino.api import rt
 
-rt.actors.cal.GuestsByEvent.column_names = 'partner role remark workflow_buttons *'
+rt.models.cal.GuestsByEvent.column_names = 'partner role remark workflow_buttons *'
 
 rt.models.countries.Places.detail_layout = """
 name country

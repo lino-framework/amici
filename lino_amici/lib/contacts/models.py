@@ -62,13 +62,13 @@ class Person(Person, Commentable):
     @classmethod
     def setup_parameters(cls, fields):
         fields.setdefault(
-            'company', models.ForeignKey(
+            'company', dd.ForeignKey(
                 'contacts.Company', blank=True, null=True))
         fields.setdefault(
-            'function', models.ForeignKey(
+            'function', dd.ForeignKey(
                 'contacts.RoleType', blank=True, null=True))
         fields.setdefault(
-            'topic', models.ForeignKey(
+            'topic', dd.ForeignKey(
                 'topics.Topic', blank=True, null=True))
         super(Person, cls).setup_parameters(fields)
     
