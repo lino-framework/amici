@@ -74,6 +74,8 @@ lino_amici.projects.herman
 lino_amici.projects.herman.settings
 lino_amici.projects.herman.settings.fixtures
 lino_amici.projects.herman.tests
+lino_amici.lib.users
+lino_amici.lib.users.fixtures
 """.splitlines() if n])
 
 SETUP_INFO.update(message_extractors={

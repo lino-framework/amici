@@ -15,6 +15,7 @@ from lino_xl.lib.excerpts.roles import ExcerptsUser, ExcerptsStaff
 from lino_xl.lib.contacts.roles import ContactsUser, ContactsStaff
 from lino_xl.lib.courses.roles import CoursesUser
 from lino_xl.lib.blogs.roles import BlogsReader
+from lino_xl.lib.sepa.roles import SepaStaff
 from lino.modlib.office.roles import OfficeStaff, OfficeUser
 from lino.modlib.checkdata.roles import CheckdataUser
 from lino.modlib.about.roles import SiteSearcher
@@ -55,7 +56,7 @@ class ProjectManager(Collector, VotesUser, Triager, CommentsUser, Worker):
 
 
 class Staff(ProjectManager, CoursesUser, ExcerptsStaff, CommentsStaff,
-            VotesStaff, TicketsStaff):
+            VotesStaff, TicketsStaff, SepaStaff):
     pass
 
 

@@ -175,17 +175,19 @@ class CompanyDetail(CompanyDetail):
     main = "general contact more"
 
     general = dd.Panel("""
-    overview general_middle address_box 
+    overview general_middle address_box
     contacts.RolesByCompany:30 lists.MembersByPartner:30 uploads.UploadsByController:20
     """, label=_("General"))
 
     general_middle = """
     id:6
     language:10 
-    parent
+    # parent
+    type:20
     """
     contact = dd.Panel("""
     # address_box
+    sepa.AccountsByPartner
     remarks 
     """, label=_("Contact"))
 
@@ -201,7 +203,7 @@ class CompanyDetail(CompanyDetail):
 #     contacts = sender.models.contacts
 #     contacts.Companies.set_detail_layout(contacts.CompanyDetail())
 
-Companies.set_detail_layout(CompanyDetail())
-Persons.set_detail_layout(PersonDetail())
+# Companies.set_detail_layout(CompanyDetail())
+# Persons.set_detail_layout(PersonDetail())
 Person.column_names = 'last_name first_name gsm email city *'
 Persons.params_layout = 'observed_event start_date end_date company function topic'
