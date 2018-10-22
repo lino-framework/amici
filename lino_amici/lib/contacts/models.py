@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2017 Luc Saffre
+# Copyright 2017-2018 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
 """Database models for this plugin.
 
@@ -34,7 +34,6 @@ PartnerDetail.contact_box = dd.Panel("""
 class Person(Person, Commentable):
     
     class Meta(Person.Meta):
-        app_label = 'contacts'
         abstract = dd.is_abstract_model(__name__, 'Person')
         
     def __str__(self):
@@ -112,12 +111,11 @@ class Person(Person, Commentable):
 
 # We use the `overview` field only in detail forms, and we
 # don't want it to have a label "Description":
-dd.update_field(Person, 'overview', verbose_name=None)    
+dd.update_field(Person, 'overview', verbose_name=None)
 
 class Company(Company, Hierarchical, Commentable):
     
     class Meta(Company.Meta):
-        app_label = 'contacts'
         abstract = dd.is_abstract_model(__name__, 'Company')
         
 
