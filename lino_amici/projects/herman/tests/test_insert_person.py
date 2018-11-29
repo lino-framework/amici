@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2017 Luc Saffre
+# Copyright 2017 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
 
 """Test whether :ticket:`2148` is fixed (Cannot insert person with
