@@ -6,6 +6,8 @@ ns = setup_from_tasks(
     blogref_url='http://luc.lino-framework.org',
     revision_control_system='git',
     locale_dir='lino_amici/lib/amici/locale',
+    cleanable_files=[
+        'docs/api/lino_amici.*'],
     demo_projects=[
-        'lino_amici.projects.herman'],
+        'lino_amici.projects.herman']
 )

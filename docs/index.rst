@@ -20,6 +20,7 @@ Content
 
    guide/index
    specs/index
+   api/index
    changes
    
 
