@@ -80,7 +80,7 @@ class Site(Site):
         yield 'lino.modlib.tinymce'
         # yield 'lino.modlib.smtpd'
         yield 'lino.modlib.weasyprint'
-        # yield 'lino_xl.lib.appypod'
+        yield 'lino_xl.lib.appypod'
         # yield 'lino.modlib.wkhtmltopdf'
         yield 'lino.modlib.comments'
         yield 'lino.modlib.dashboard'
