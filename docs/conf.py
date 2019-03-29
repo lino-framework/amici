@@ -26,7 +26,7 @@ from django.conf import settings
 intersphinx_mapping = {}
 from atelier.sphinxconf import interproject
 interproject.configure(
-    globals(), 'atelier etgen lino_book')
+    globals(), 'atelier etgen')
 
 
 # General configuration
