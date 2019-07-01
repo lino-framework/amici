@@ -44,7 +44,7 @@ author and therefore poorly documented.
     author='Luc Saffre',
     author_email='luc@lino-framework.org',
     url="http://amici.lino-framework.org",
-    license='BSD License',
+    license='BSD-2-Clause',
     classifiers="""\
 Programming Language :: Python
 Programming Language :: Python :: 2
