@@ -93,21 +93,25 @@ class Site(Site):
         # yield 'lino_xl.lib.mailbox'
         # yield 'lino_xl.lib.meetings'
 
+    def get_plugin_configs(self):
+        for i in super(Site, self).get_plugin_configs():
+            yield i
+        yield ('addresses', 'partner_model', 'contacts.Person')
+        yield ('cal', 'partner_model', 'contacts.Person')
+        yield ('contacts', 'with_roles_history', True)
 
-    def setup_plugins(self):
-        super(Site, self).setup_plugins()
-        # self.plugins.comments.configure(
-        #     commentable_model='tickets.Ticket')
-        # self.plugins.skills.configure(
-        #     demander_model='contacts.Person')
-        self.plugins.addresses.configure(
-            partner_model='contacts.Person')
-        self.plugins.addresses.configure(
-            partner_model='contacts.Person')
-        self.plugins.cal.configure(
-            partner_model='contacts.Person')
-        self.plugins.contacts.configure(
-            with_roles_history=True)
+    # def setup_plugins(self):
+    #     super(Site, self).setup_plugins()
+    #     # self.plugins.comments.configure(
+    #     #     commentable_model='tickets.Ticket')
+    #     # self.plugins.skills.configure(
+    #     #     demander_model='contacts.Person')
+    #     self.plugins.addresses.configure(
+    #         partner_model='contacts.Person')
+    #     self.plugins.cal.configure(
+    #         partner_model='contacts.Person')
+    #     self.plugins.contacts.configure(
+    #         with_roles_history=True)
 
         # self.plugins.skills.configure(
         #     demander_model='tickets.Ticket')
