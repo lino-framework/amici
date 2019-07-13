@@ -4,10 +4,17 @@
 Changes in Lino Amici
 ========================
 
-The final truth about what's going on is only 
-`The Source Code <https://github.com/lino-framework/amici>`_.
+2019-07-13
+==========
 
-Development
-===========
+Activated the possibility to enable automatic presences on a calendar entry
+type (:ticket:`3119`). Until now, checking the
+:attr:`lino_xl.lib.cal.EventType.force_guest_state` option had no effect since
+the entry states did not know which guest state to set when it was enabled.
 
-2017-05-05 first publication. 
+Added :class:`lino_xl.lib.cal.EntriesByGuest` to the detail view of a person.
+
+2017-05-05
+==========
+
+First publication.

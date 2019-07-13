@@ -132,7 +132,7 @@ class PersonDetail(PersonDetail):
 
     general = dd.Panel("""
     overview contact_box #phones.ContactDetailsByPartner
-    contacts.RolesByPerson:30 lists.MembersByPartner:30 sepa.AccountsByPartner:30
+    contacts.RolesByPerson:30 lists.MembersByPartner:30 cal.EntriesByGuest:30
     """, label=_("General"))
 
     contact_box = dd.Panel("""
@@ -153,9 +153,9 @@ class PersonDetail(PersonDetail):
     # """, label=_("Career"))
 
     links = dd.Panel("""
-    humanlinks.LinksByHuman:30
+    humanlinks.LinksByHuman:30  
     households.MembersByPerson:20 households.SiblingsByPerson:50
-    """, label=_("Links"))
+    """, label=_("Family"))
 
     more = dd.Panel("""
     more_left comments.CommentsByRFC:30
@@ -163,7 +163,7 @@ class PersonDetail(PersonDetail):
 
     more_left = """
     remarks
-    checkdata.ProblemsByOwner
+    checkdata.ProblemsByOwner:20 sepa.AccountsByPartner:30
     uploads.UploadsByController:20
     """
 
