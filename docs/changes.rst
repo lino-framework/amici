@@ -1,8 +1,14 @@
-.. _amici.changes: 
+.. _amici.changes:
 
 ========================
 Changes in Lino Amici
 ========================
+
+2019-11-01
+==========
+
+Default :term:`front end` is now :ref:`react`.
+Added some fields to the insert_layout of :class:`lino_amici.lib.contacts.Persons`.
 
 2019-07-13
 ==========

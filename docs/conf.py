@@ -26,7 +26,8 @@ from django.conf import settings
 intersphinx_mapping = {}
 from atelier.sphinxconf import interproject
 interproject.configure(
-    globals(), 'atelier etgen')
+    globals(), 'atelier etgen lino_react')
+intersphinx_mapping['cg'] = ('http://community.lino-framework.org/', None)
 
 
 # General configuration
@@ -65,7 +66,7 @@ language = 'en'
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
 exclude_patterns = [
-    '.build/*', 
+    '.build/*',
     'include/*',
 ]
 

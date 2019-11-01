@@ -31,11 +31,13 @@ class Site(Site):
     workflows_module = 'lino_amici.lib.amici.workflows'
     obj2text_template = "**{0}**"
 
-    default_build_method = 'appyodt'
-    
+    # default_build_method = 'appyodt'
+    default_build_method = 'weasy2pdf'
+    default_ui = 'lino_react.react'
+
     # experimental use of rest_framework:
     # root_urlconf = 'lino_book.projects.team.urls'
-    
+
     # migration_class = 'lino_amici.lib.amici.migrate.Migrator'
 
     auto_configure_logger_names = "atelier django lino lino_xl lino_amici"
@@ -127,7 +129,6 @@ class Site(Site):
         a = self.models.users.MySettings.default_action
         tb.add_instance_action(
             user, action=a, label=_("My settings"))
-        
 
         tb.add_action(
             self.models.blogs.MyEntries.insert_action,
@@ -141,4 +142,3 @@ USE_TZ = True
 # TIME_ZONE = 'Europe/Brussels'
 # TIME_ZONE = 'Europe/Tallinn'
 TIME_ZONE = 'UTC'
-
