@@ -1,10 +1,7 @@
 language: python
 python:
-  - "2.7"
   - "3.6"
-env:
-  - DJANGO=1.11
-  - LINO_VERSION=stable
+  - "3.7"
 
 before_install:
   - sudo apt-get install tidy
@@ -14,7 +11,6 @@ before_install:
 install:
   - pip install -U setuptools
   - pip install coveralls
-  - pip install Django==$DJANGO
   - pip install -U pytest-cov
   - bash install_requirements.sh
   - pip install -e .
@@ -27,4 +23,3 @@ script:
 
 after_success:
   - coveralls
-
