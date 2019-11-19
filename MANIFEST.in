@@ -3,4 +3,4 @@ global-include *.txt *.py *.js *.css *.html \
   *.xml \
   *.po *.mo
 prune docs
-prune .build
+# prune .build
