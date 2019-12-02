@@ -1,7 +1,11 @@
+dist: bionic
 language: python
 python:
   - "3.6"
   - "3.7"
+
+os: linux
+sudo: required
 
 before_install:
   - sudo apt-get install -y tidy libreoffice python3-uno
