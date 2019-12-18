@@ -1,9 +1,6 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2017-2018 Rumma & Ko Ltd
+# Copyright 2017-2019 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
-"""Database models for this plugin.
-
-"""
 
 from lino.api import dd, rt, _
 from lino.utils import join_words
@@ -12,23 +9,34 @@ from lino.mixins import  Hierarchical
 from lino_xl.lib.contacts.models import *
 from lino.modlib.comments.mixins import Commentable
 
+class PartnerDetail(PartnerDetail):
 
-PartnerDetail.address_box = dd.Panel("""
+    main = """
+    overview address_box:60 contact_box:30
+    bottom_box
+    """
+
+    address_box = dd.Panel("""
     name_box
     country #region city zip_code:10
-    #addr1
+    addr1
     #street_prefix street:25 street_no street_box
     #addr2
     """)  # , label=_("Address"))
 
-PartnerDetail.contact_box = dd.Panel("""
+    contact_box = dd.Panel("""
     url
     phone
     gsm #fax
     """, label=_("Contact"))
 
-# from lino_xl.lib.addresses.mixins import AddressOwner
-# from lino_xl.lib.phones.mixins import ContactDetailsOwner
+    bottom_box = """
+    remarks lists.MembersByPartner
+    """
+
+
+
+Partners.detail_layout = 'contacts.PartnerDetail'
 
 
 class Person(Person, Commentable):
