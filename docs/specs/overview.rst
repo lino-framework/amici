@@ -6,14 +6,18 @@ Lino Amici Overview
 ===================
 
 
-.. contents:: 
+.. contents::
    :local:
    :depth: 2
+
+.. include:: /../docs/shared/include/tested.rst
 
 >>> from lino import startup
 >>> startup('lino_amici.projects.herman.settings.demo')
 >>> from lino.api.doctest import *
 
+User types
+==========
 
 >>> rt.show(users.UserTypes)
 ======= =========== =================
@@ -28,3 +32,27 @@ Lino Amici Overview
 ======= =========== =================
 <BLANKLINE>
 
+>>> ses = rt.login('robin')
+>>> ses.user.user_type
+users.UserTypes.admin:900
+>>> ses.show_menu()
+- Contacts : Persons, Organizations, Households, Partner Lists
+- Office : Data problems assigned to me, My Blog Entries, My Excerpts, My Comments, Recent comments, My Uploads
+- Calendar : My appointments, Overdue appointments, My unconfirmed appointments, My tasks, My guests, My presences, My overdue appointments, Calendar view
+- Configure :
+  - System : Users, Site Parameters, Help Texts
+  - Contacts : Organization types, Functions, Household Types, List Types
+  - Calendar : Calendars, Rooms, Recurring events, Guest roles, Calendar entry types, Recurrency policies, Remote Calendars, Planner rows
+  - Topics : Topics
+  - Blog : Blog Entry Types
+  - Office : Excerpt Types, My Text Field Templates, Comment Types, Library volumes, Upload Types
+  - Places : Countries, Places
+- Explorer :
+  - System : Authorities, User types, User roles, Data checkers, Data problems, All dashboard widgets, content types
+  - Contacts : Contact Persons, Partners, Address types, Addresses, Contact detail types, Contact details, Household member roles, Household Members, Personal Links, Parency types, List memberships
+  - Calendar : Calendar entries, Tasks, Presences, Subscriptions, Entry states, Presence states, Task states
+  - SEPA : Bank accounts
+  - Topics : Interests
+  - Blog : Blog Entries
+  - Office : Excerpts, Text Field Templates, Comments, Mentions, Uploads, Upload Areas
+- Site : About

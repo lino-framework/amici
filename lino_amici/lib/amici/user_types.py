@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2017 Luc Saffre
+# Copyright 2017-2019 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
 
 """Defines the user types for Lino Amici.
@@ -8,7 +8,6 @@ This is used as the :attr:`user_types_module
 <lino.core.site.Site.user_types_module>` for Amici sites.
 
 """
-
 
 from lino.core.roles import UserRole, SiteAdmin
 from lino_xl.lib.excerpts.roles import ExcerptsUser, ExcerptsStaff
@@ -77,11 +76,3 @@ add('200', _("Collector"),        Collector, 'collector')
 add('300', _("Project manager"),  ProjectManager, 'manager')
 add('800', _("Staff"),            Staff, 'staff')
 add('900', _("Administrator"),    SiteAdmin, 'admin')
-
-
-# from lino.core.merge import MergeAction
-# from lino.api import rt
-# lib = rt.models
-# for m in (lib.contacts.Company, ):
-#     m.define_action(merge_row=MergeAction(
-#         m, required_roles=set([ContactsStaff])))
