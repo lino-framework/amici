@@ -26,7 +26,7 @@ from django.conf import settings
 intersphinx_mapping = {}
 from atelier.sphinxconf import interproject
 interproject.configure(
-    globals(), 'atelier etgen lino_react')
+    globals(), 'atelier etgen lino_book lino_react')
 intersphinx_mapping['cg'] = ('http://community.lino-framework.org/', None)
 
 
@@ -35,7 +35,7 @@ intersphinx_mapping['cg'] = ('http://community.lino-framework.org/', None)
 
 # General information about the project.
 project = "Lino Amici"
-copyright = '2014-2018 Rumma & Ko Ltd'
+copyright = '2014-2019 Rumma & Ko Ltd'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -67,7 +67,7 @@ language = 'en'
 # for source files.
 exclude_patterns = [
     '.build/*',
-    'include/*',
+    'shared/*',
 ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
