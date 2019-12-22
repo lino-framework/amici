@@ -12,19 +12,20 @@ from lino.modlib.comments.mixins import Commentable
 class PartnerDetail(PartnerDetail):
 
     main = """
-    overview address_box:60 contact_box:30
+    overview #address_box:60 contact_box:30
     bottom_box
     """
 
-    address_box = dd.Panel("""
-    name_box
-    country #region city zip_code:10
-    addr1
-    #street_prefix street:25 street_no street_box
-    #addr2
-    """)  # , label=_("Address"))
+    # address_box = dd.Panel("""
+    # name_box
+    # country #region city zip_code:10
+    # addr1
+    # #street_prefix street:25 street_no street_box
+    # #addr2
+    # """)  # , label=_("Address"))
 
     contact_box = dd.Panel("""
+    name_box
     url
     phone
     gsm #fax
@@ -185,11 +186,11 @@ class CompanyDetail(CompanyDetail):
     main = "general contact more"
 
     general = dd.Panel("""
-    overview general_middle address_box
+    overview:50 data_box:30 #address_box
     contacts.RolesByCompany:30 lists.MembersByPartner:30 uploads.UploadsByController:20
     """, label=_("General"))
 
-    general_middle = """
+    data_box = """
     id:6
     language:10
     # parent

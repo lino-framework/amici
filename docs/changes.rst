@@ -4,6 +4,12 @@
 Changes in Lino Amici
 ========================
 
+2019-12-22
+==========
+
+Also households and organizations can now have multiple addresses
+(:ticket:`3427`).
+
 2019-11-01
 ==========
 

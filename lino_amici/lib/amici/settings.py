@@ -98,7 +98,7 @@ class Site(Site):
     def get_plugin_configs(self):
         for i in super(Site, self).get_plugin_configs():
             yield i
-        yield ('addresses', 'partner_model', 'contacts.Person')
+        # yield ('addresses', 'partner_model', 'contacts.Person')
         yield ('cal', 'partner_model', 'contacts.Person')
         yield ('contacts', 'with_roles_history', True)
 
@@ -124,6 +124,7 @@ class Site(Site):
     def setup_quicklinks(self, user, tb):
         super(Site, self).setup_quicklinks(user, tb)
         tb.add_action(self.models.contacts.Persons)
+        tb.add_action(self.models.households.Households)
         tb.add_action(self.models.contacts.Companies)
 
         a = self.models.users.MySettings.default_action
