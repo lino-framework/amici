@@ -8,7 +8,8 @@ Changes in Lino Amici
 ==========
 
 Also households and organizations can now have multiple addresses
-(:ticket:`3427`).
+(:ticket:`3427`). Requires data migration. Must run :manage:`checkdata` after
+data migration.
 
 2019-11-01
 ==========
