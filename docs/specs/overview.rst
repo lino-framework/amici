@@ -16,6 +16,18 @@ Lino Amici Overview
 >>> startup('lino_amici.projects.herman.settings.demo')
 >>> from lino.api.doctest import *
 
+
+>>> print(analyzer.show_complexity_factors())
+... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE +REPORT_UDIFF
+- 38 plugins
+- 60 models
+- 19 user roles
+- 6 user types
+- 221 views
+- 18 dialog actions
+<BLANKLINE>
+
+
 User types
 ==========
 
