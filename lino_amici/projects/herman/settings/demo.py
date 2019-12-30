@@ -6,7 +6,9 @@ from ..settings import *
 
 
 class Site(Site):
-    the_demo_date = datetime.date(2017, 3, 16)
+    the_demo_date = datetime.date(2019, 12, 16)
+    languages = "en de fr"
+    # is_demo_site = False
 
     # default_ui = 'lino.modlib.extjs'
 

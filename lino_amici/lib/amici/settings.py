@@ -100,6 +100,7 @@ class Site(Site):
             yield i
         # yield ('addresses', 'partner_model', 'contacts.Person')
         yield ('cal', 'partner_model', 'contacts.Person')
+        yield ('cal', 'demo_absences', False)
         yield ('contacts', 'with_roles_history', True)
 
     # def setup_plugins(self):
