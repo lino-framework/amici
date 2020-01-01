@@ -4,6 +4,13 @@
 Changes in Lino Amici
 ========================
 
+2020-01-01
+==========
+
+The name field was missing in detail view of organizations.
+
+Released v 20.1.0 to PyPI
+
 2019-12-22
 ==========
 

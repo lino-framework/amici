@@ -1,10 +1,10 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2017-2019 Rumma & Ko Ltd
+# Copyright 2017-2020 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
 
 from lino.api import dd, rt, _
 from lino.utils import join_words
-from lino.mixins import  Hierarchical
+from lino.mixins import Hierarchical
 
 from lino_xl.lib.contacts.models import *
 from lino.modlib.comments.mixins import Commentable
@@ -25,7 +25,7 @@ class PartnerDetail(PartnerDetail):
     # """)  # , label=_("Address"))
 
     contact_box = dd.Panel("""
-    name_box
+    name id
     url
     phone
     gsm #fax
@@ -191,7 +191,7 @@ class CompanyDetail(CompanyDetail):
     """, label=_("General"))
 
     data_box = """
-    id:6
+    name id:6
     language:10
     # parent
     type:20

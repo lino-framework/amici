@@ -1,33 +1,18 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2017-2019 Rumma & Ko Ltd
+# Copyright 2017-2020 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
 
 # $ python setup.py test -s tests.PackagesTests.test_packages
 
 SETUP_INFO = dict(
     name='lino-amici',
-    version='18.8.0',
+    version='20.1.0',
     install_requires=['lino-xl', 'vobject', 'lino-react'],
 
     # tests_require=['pytest', 'mock'],
     test_suite='tests',
     description=("A Lino application for managing family contacts"),
     long_description="""\
-.. image:: https://readthedocs.org/projects/lino/badge/?version=latest
-    :alt: Documentation Status
-    :target: http://lino.readthedocs.io/en/latest/?badge=latest
-
-.. image:: https://coveralls.io/repos/github/lino-framework/noi/badge.svg?branch=master
-    :target: https://coveralls.io/github/lino-framework/noi?branch=master
-
-.. image:: https://travis-ci.org/lino-framework/noi.svg?branch=stable
-    :target: https://travis-ci.org/lino-framework/noi?branch=stable
-
-.. image:: https://img.shields.io/pypi/v/lino-noi.svg
-    :target: https://pypi.python.org/pypi/lino-noi/
-
-.. image:: https://img.shields.io/pypi/l/lino-noi.svg
-    :target: https://pypi.python.org/pypi/lino-noi/
 
 Lino Amici is a customizable Lino application for managing family
 contacts.  It is currently a submarine project, used only by its
@@ -47,7 +32,7 @@ author and therefore poorly documented.
     license='BSD-2-Clause',
     classifiers="""\
 Programming Language :: Python
-Programming Language :: Python :: 2
+Programming Language :: Python :: 3
 Development Status :: 4 - Beta
 Environment :: Web Environment
 Framework :: Django
