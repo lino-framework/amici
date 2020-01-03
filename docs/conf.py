@@ -35,7 +35,7 @@ intersphinx_mapping['cg'] = ('http://community.lino-framework.org/', None)
 
 # General information about the project.
 project = "Lino Amici"
-copyright = '2014-2019 Rumma & Ko Ltd'
+copyright = '2014-2020 Rumma & Ko Ltd'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
