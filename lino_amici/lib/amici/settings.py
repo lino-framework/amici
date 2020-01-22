@@ -1,13 +1,10 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2014-2017 Luc Saffre
+# Copyright 2014-2020 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
 """
 Base Django settings for Lino Amici applications.
 
 """
-
-from __future__ import print_function
-from __future__ import unicode_literals
 
 from lino.projects.std.settings import *
 from lino.api.ad import _
@@ -54,6 +51,7 @@ class Site(Site):
         # yield 'lino_xl.lib.online.users'
         yield 'lino.modlib.checkdata'
         yield 'lino_xl.lib.cal'
+        yield 'lino_xl.lib.calview'
         yield 'lino_xl.lib.sepa'
         # yield 'lino_xl.lib.extensible'
         yield 'lino_xl.lib.addresses'

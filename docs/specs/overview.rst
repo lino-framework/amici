@@ -19,7 +19,7 @@ Lino Amici Overview
 
 >>> print(analyzer.show_complexity_factors())
 ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE +REPORT_UDIFF
-- 38 plugins
+- 39 plugins
 - 60 models
 - 19 user roles
 - 6 user types
@@ -48,8 +48,9 @@ User types
 >>> ses.user.user_type
 users.UserTypes.admin:900
 >>> ses.show_menu()
+... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE +REPORT_UDIFF
 - Contacts : Persons, Organizations, Households, Partner Lists
-- Office : Data problems assigned to me, My Blog Entries, My Excerpts, My Comments, Recent comments, My Uploads
+- Office : Data problems assigned to me, My Blog Entries, My Excerpts, My Comments, Recent comments, My Upload files
 - Calendar : My appointments, Overdue appointments, My unconfirmed appointments, My tasks, My guests, My presences, My overdue appointments, Calendar view
 - Configure :
   - System : Users, Site Parameters, Help Texts
@@ -57,7 +58,7 @@ users.UserTypes.admin:900
   - Calendar : Calendars, Rooms, Recurring events, Guest roles, Calendar entry types, Recurrency policies, Remote Calendars, Planner rows
   - Topics : Topics
   - Blog : Blog Entry Types
-  - Office : Excerpt Types, My Text Field Templates, Comment Types, Library volumes, Upload Types
+  - Office : Excerpt Types, My Text Field Templates, Comment Types, Library volumes, Upload types
   - Places : Countries, Places
 - Explorer :
   - System : Authorities, User types, User roles, Data checkers, Data problems, All dashboard widgets, content types
@@ -66,5 +67,5 @@ users.UserTypes.admin:900
   - SEPA : Bank accounts
   - Topics : Interests
   - Blog : Blog Entries
-  - Office : Excerpts, Text Field Templates, Comments, Mentions, Uploads, Upload Areas
+  - Office : Excerpts, Text Field Templates, Comments, Mentions, Upload files, Upload areas
 - Site : About
