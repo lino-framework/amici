@@ -23,7 +23,7 @@ Lino Amici Overview
 - 60 models
 - 19 user roles
 - 6 user types
-- 221 views
+- 220 views
 - 18 dialog actions
 <BLANKLINE>
 
@@ -51,7 +51,7 @@ users.UserTypes.admin:900
 ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE +REPORT_UDIFF
 - Contacts : Persons, Organizations, Households, Partner Lists
 - Office : Data problems assigned to me, My Blog Entries, My Excerpts, My Comments, Recent comments, My Upload files
-- Calendar : My appointments, Overdue appointments, My unconfirmed appointments, My tasks, My guests, My presences, My overdue appointments, Calendar view
+- Calendar : My appointments, Overdue appointments, My unconfirmed appointments, My tasks, My guests, My presences, My overdue appointments, Calendar
 - Configure :
   - System : Users, Site Parameters, Help Texts
   - Contacts : Organization types, Functions, Household Types, List Types
