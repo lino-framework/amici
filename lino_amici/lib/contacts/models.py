@@ -41,9 +41,9 @@ Partners.detail_layout = 'contacts.PartnerDetail'
 
 
 class Person(Person, Commentable):
-
     class Meta(Person.Meta):
         abstract = dd.is_abstract_model(__name__, 'Person')
+
 
     def __str__(self):
         words = []
@@ -224,3 +224,6 @@ gender country language
 email
 gsm
 """
+Persons.react_responsive = False
+Persons.react_big_search = True
+Persons.column_names = 'last_name first_name *'
