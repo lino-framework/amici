@@ -9,6 +9,9 @@ from lino.mixins import Hierarchical
 from lino_xl.lib.contacts.models import *
 from lino.modlib.comments.mixins import Commentable
 
+Partner.define_action(show_problems=dd.ShowSlaveTable(
+    'checkdata.ProblemsByOwner', icon_name='bell', combo_group="checkdata"))
+
 class PartnerDetail(PartnerDetail):
 
     main = """
