@@ -62,7 +62,7 @@ users.UserTypes.admin:900
   - Places : Countries, Places
 - Explorer :
   - System : Authorities, User types, User roles, Data checkers, Data problems, All dashboard widgets, content types
-  - Contacts : Contact Persons, Partners, Address types, Addresses, Contact detail types, Contact details, Household member roles, Household Members, Personal Links, Parency types, List memberships
+  - Contacts : Contact persons, Partners, Address types, Addresses, Contact detail types, Contact details, Household member roles, Household Members, Personal Links, Parency types, List memberships
   - Calendar : Calendar entries, Tasks, Presences, Subscriptions, Entry states, Presence states, Task states
   - SEPA : Bank accounts
   - Topics : Interests
