@@ -15,8 +15,8 @@ install:
   - pip install -U setuptools
   # - pip install coveralls
   # - pip install -U pytest-cov
-  - bash install_requirements.sh
   - pip install -e .
+  - inv install  # runs manage.py install in every demo project
   - pip freeze
 
 script:
