@@ -7,7 +7,7 @@ nonempty email in Amici (lino_xl.lib.phones))
 
 You can run only these tests by issuing::
 
-  $ go herman
+  $ go amici1
   $ python manage.py test tests.test_insert_person
 
 
@@ -35,7 +35,7 @@ class TestCase(TestCase):
         self.assertEqual(settings.SETTINGS_MODULE, None)
         self.assertEqual(settings.LOGGING, {})
         self.assertEqual(settings.SERVER_EMAIL, 'root@localhost')
-        
+
     def test_insert_person(self):
         # ContentType = rt.models.contenttypes.ContentType
         # Person = rt.models.contacts.Person
@@ -72,4 +72,3 @@ class TestCase(TestCase):
         cd = ContactDetail.objects.all()[0]
         self.assertEqual(cd.partner, joe)
         self.assertEqual(cd.value, "joe@meyer.com")
-        

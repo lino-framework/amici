@@ -55,10 +55,10 @@ lino_amici.lib.amici.fixtures
 lino_amici.lib.contacts
 lino_amici.lib.contacts.fixtures
 lino_amici.projects
-lino_amici.projects.herman
-lino_amici.projects.herman.settings
-lino_amici.projects.herman.settings.fixtures
-lino_amici.projects.herman.tests
+lino_amici.projects.amici1
+lino_amici.projects.amici1.settings
+lino_amici.projects.amici1.settings.fixtures
+lino_amici.projects.amici1.tests
 lino_amici.lib.users
 lino_amici.lib.users.fixtures
 """.splitlines() if n])

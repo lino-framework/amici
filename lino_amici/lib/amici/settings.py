@@ -59,7 +59,7 @@ class Site(Site):
         yield 'lino_xl.lib.households'
         yield 'lino_xl.lib.humanlinks'
         # yield 'lino_xl.lib.cv'
-        # yield 'lino_noi.lib.courses'
+        yield 'lino_xl.lib.courses'
         # yield 'lino_noi.lib.products'
 
         yield 'lino_xl.lib.topics'

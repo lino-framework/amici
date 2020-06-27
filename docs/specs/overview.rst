@@ -13,18 +13,18 @@ Lino Amici Overview
 .. include:: /../docs/shared/include/tested.rst
 
 >>> from lino import startup
->>> startup('lino_amici.projects.herman.settings.demo')
+>>> startup('lino_amici.projects.amici1.settings.demo')
 >>> from lino.api.doctest import *
 
 
 >>> print(analyzer.show_complexity_factors())
 ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE +REPORT_UDIFF
-- 39 plugins
-- 60 models
+- 40 plugins
+- 65 models
 - 19 user roles
 - 6 user types
-- 220 views
-- 18 dialog actions
+- 248 views
+- 21 dialog actions
 <BLANKLINE>
 
 
@@ -52,10 +52,12 @@ User types
 - Contacts : Persons, Organizations, Households, Partner Lists
 - Office : Data problems assigned to me, My Blog Entries, My Excerpts, My Comments, Recent comments, My Upload files
 - Calendar : My appointments, Overdue appointments, My unconfirmed appointments, My tasks, My guests, My presences, My overdue appointments, Calendar
+- Activities : My Activities, Activities, -, Activity lines, Pending requested enrolments, Pending confirmed enrolments
 - Configure :
   - System : Users, Site Parameters, Help Texts
   - Contacts : Organization types, Functions, Household Types, List Types
   - Calendar : Calendars, Rooms, Recurring events, Guest roles, Calendar entry types, Recurrency policies, Remote Calendars, Planner rows
+  - Activities : Topics, Timetable Slots
   - Topics : Topics
   - Blog : Blog Entry Types
   - Office : Excerpt Types, My Text Field Templates, Comment Types, Library volumes, Upload types
@@ -65,6 +67,7 @@ User types
   - Contacts : Contact persons, Partners, Address types, Addresses, Contact detail types, Contact details, Household member roles, Household Members, Personal Links, Parency types, List memberships
   - Calendar : Calendar entries, Tasks, Presences, Subscriptions, Entry states, Presence states, Task states, Planner columns, Access classes, Display colors
   - SEPA : Bank accounts
+  - Activities : Activities, Enrolments, Enrolment states, Course layouts, Activity states
   - Topics : Interests
   - Blog : Blog Entries
   - Office : Excerpts, Text Field Templates, Comments, Mentions, Upload files, Upload areas

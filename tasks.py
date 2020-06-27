@@ -9,5 +9,5 @@ ns = setup_from_tasks(
     cleanable_files=[
         'docs/api/lino_amici.*'],
     demo_projects=[
-        'lino_amici.projects.herman']
+        'lino_amici.projects.amici1']
 )

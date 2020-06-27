@@ -13,7 +13,7 @@ extlinks = {}
 
 from lino.sphinxcontrib import configure
 #configure(globals())
-configure(globals(), 'lino_amici.projects.herman.settings.demo')
+configure(globals(), 'lino_amici.projects.amici1.settings.demo')
 # configure(globals(), 'lino_book.projects.min1.settings.doctests')
 
 extlinks.update(ticket=('http://bugs.saffre-rumma.net/tickets/Ticket/%s', '#'))
