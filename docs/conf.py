@@ -27,7 +27,7 @@ intersphinx_mapping = {}
 from atelier.sphinxconf import interproject
 interproject.configure(
     globals(), 'atelier etgen lino_book lino_react')
-intersphinx_mapping['cg'] = ('http://community.lino-framework.org/', None)
+intersphinx_mapping['cg'] = ('https://community.lino-framework.org/', None)
 
 
 # General configuration
