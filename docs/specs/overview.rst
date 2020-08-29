@@ -72,3 +72,15 @@ User types
   - Blog : Blog Entries
   - Office : Excerpts, Text Field Templates, Comments, Mentions, Upload files, Upload areas
 - Site : About
+
+
+Activity layouts
+================
+
+>>> rt.show(courses.CourseAreas)
+======= ========= ============ =================
+ value   name      text         Table
+------- --------- ------------ -----------------
+ C       default   Activities   courses.Courses
+======= ========= ============ =================
+<BLANKLINE>
