@@ -2,7 +2,7 @@
 # Copyright 2017-2020 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
 
-# $ python setup.py test -s tests.PackagesTests.test_packages
+# $ python setup.py test -s tests.test_packages
 
 SETUP_INFO = dict(
     name='lino-amici',
@@ -51,7 +51,6 @@ SETUP_INFO.update(packages=[str(n) for n in """
 lino_amici
 lino_amici.lib
 lino_amici.lib.amici
-lino_amici.lib.amici.fixtures
 lino_amici.lib.contacts
 lino_amici.lib.contacts.fixtures
 lino_amici.projects
