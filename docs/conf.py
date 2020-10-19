@@ -26,8 +26,9 @@ from django.conf import settings
 intersphinx_mapping = {}
 from atelier.sphinxconf import interproject
 interproject.configure(
-    globals(), 'atelier etgen lino_book lino_react')
+    globals(), 'atelier etgen lino_react')
 intersphinx_mapping['cg'] = ('https://community.lino-framework.org/', None)
+intersphinx_mapping['book'] = ('https://www.lino-framework.org/', None)
 
 
 # General configuration
