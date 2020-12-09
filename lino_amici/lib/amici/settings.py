@@ -32,9 +32,6 @@ class Site(Site):
     default_build_method = 'weasy2pdf'
     default_ui = 'lino_react.react'
 
-    # experimental use of rest_framework:
-    # root_urlconf = 'lino_book.projects.team.urls'
-
     # migration_class = 'lino_amici.lib.amici.migrate.Migrator'
 
     auto_configure_logger_names = "atelier django lino lino_xl lino_amici"
