@@ -20,9 +20,9 @@ Lino Amici Overview
 >>> print(analyzer.show_complexity_factors())
 ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE +REPORT_UDIFF
 - 40 plugins
-- 65 models
+- 66 models
 - 6 user types
-- 250 views
+- 251 views
 - 21 dialog actions
 <BLANKLINE>
 
@@ -69,7 +69,7 @@ User types
   - Activities : Activities, Enrolments, Enrolment states, Course layouts, Activity states
   - Topics : Interests
   - Blog : Blog Entries
-  - Office : Excerpts, Text Field Templates, Comments, Mentions, Upload files, Upload areas
+  - Office : Excerpts, Text Field Templates, Comments, Mentions, Reactions, Upload files, Upload areas
 - Site : About
 
 
