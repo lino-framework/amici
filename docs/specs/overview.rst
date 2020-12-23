@@ -76,12 +76,12 @@ User types
 Activity layouts
 ================
 
->>> rt.show(courses.CourseAreas)
-======= ========= ============ =================
+>>> rt.show(courses.ActivityLayouts)
+======= ========= ============ ============================
  value   name      text         Table
-------- --------- ------------ -----------------
- C       default   Activities   courses.Courses
-======= ========= ============ =================
+------- --------- ------------ ----------------------------
+ C       default   Activities   courses.ActivitiesByLayout
+======= ========= ============ ============================
 <BLANKLINE>
 
 
