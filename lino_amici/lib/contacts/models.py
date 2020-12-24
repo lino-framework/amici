@@ -140,7 +140,7 @@ class Company(Company, Hierarchical, Commentable):
 
 class PersonDetail(PersonDetail):
 
-    main = "general #contact #career links more"
+    main = "general #contact #career family more"
 
     general = dd.Panel("""
     overview contact_box #phones.ContactDetailsByPartner
@@ -164,9 +164,9 @@ class PersonDetail(PersonDetail):
     # cv.ExperiencesByPerson:40
     # """, label=_("Career"))
 
-    links = dd.Panel("""
-    humanlinks.LinksByHuman:30
-    households.MembersByPerson:20 households.SiblingsByPerson:50
+    family = dd.Panel("""
+    humanlinks.LinksByHuman:50 households.MembersByPerson:30
+    households.SiblingsByPerson
     """, label=_("Family"))
 
     more = dd.Panel("""
@@ -189,8 +189,8 @@ class CompanyDetail(CompanyDetail):
     main = "general contact more"
 
     general = dd.Panel("""
-    overview:50 data_box:30 #address_box
-    contacts.RolesByCompany:30 lists.MembersByPartner:30 uploads.UploadsByController:20
+    overview:30 data_box:30
+    contacts.RolesByCompany:30 sepa.AccountsByPartner:30
     """, label=_("General"))
 
     data_box = """
@@ -201,13 +201,12 @@ class CompanyDetail(CompanyDetail):
     """
     contact = dd.Panel("""
     # address_box
-    sepa.AccountsByPartner
-    remarks
+    CompaniesByCompany lists.MembersByPartner:30
+    remarks checkdata.ProblemsByOwner
     """, label=_("Contact"))
 
     more = dd.Panel("""
-    CompaniesByCompany checkdata.ProblemsByOwner
-    comments.CommentsByRFC
+    uploads.UploadsByController:20 comments.CommentsByRFC:50
     """, label=_("More"))
 
 
