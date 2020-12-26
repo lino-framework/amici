@@ -6,7 +6,7 @@
 
 SETUP_INFO = dict(
     name='lino-amici',
-    version='20.6.0',
+    version='20.12.0',
     install_requires=['lino-xl', 'vobject', 'lino-react'],
 
     # tests_require=['pytest', 'mock'],
