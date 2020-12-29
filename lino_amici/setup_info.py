@@ -53,6 +53,8 @@ lino_amici.lib
 lino_amici.lib.amici
 lino_amici.lib.contacts
 lino_amici.lib.contacts.fixtures
+lino_amici.lib.households
+lino_amici.lib.households.fixtures
 lino_amici.projects
 lino_amici.projects.amici1
 lino_amici.projects.amici1.settings
