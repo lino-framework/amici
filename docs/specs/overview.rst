@@ -46,7 +46,7 @@ User types
 >>> ses = rt.login('robin')
 >>> ses.user.user_type
 <users.UserTypes.admin:900>
->>> ses.show_menu()
+>>> show_menu(ses.user.username)
 ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE +REPORT_UDIFF
 - Contacts : Persons, Organizations, Households, Partner Lists
 - Office : Data problems assigned to me, My Blog Entries, My Excerpts, My Comments, Recent comments, My Upload files
