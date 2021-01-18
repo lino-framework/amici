@@ -70,7 +70,7 @@ User types
   - Topics : Interests
   - Blog : Blog Entries
   - Office : Excerpts, Comments, Mentions, Reactions, Upload files, Upload areas
-- Site : About
+- Site : About, User sessions
 
 
 Activity layouts
