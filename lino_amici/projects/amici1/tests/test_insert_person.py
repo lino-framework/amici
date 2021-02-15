@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2017 Rumma & Ko Ltd
+# Copyright 2017-2021 Rumma & Ko Ltd
 # License: BSD (see file COPYING for details)
 
 """Test whether :ticket:`2148` is fixed (Cannot insert person with
@@ -13,8 +13,6 @@ You can run only these tests by issuing::
 
 """
 
-from __future__ import unicode_literals
-
 import datetime
 
 from django.conf import settings
@@ -22,10 +20,9 @@ from django.conf import settings
 from lino.api import dd, rt
 from lino.utils.djangotest import TestCase
 from lino.core import constants
-
 from lino.modlib.users.choicelists import UserTypes
-
 from lino.utils.instantiator import create
+
 
 class TestCase(TestCase):
     """Miscellaneous tests."""
@@ -66,7 +63,8 @@ class TestCase(TestCase):
             result['message'],
             """Person "Joe Meyer" has been created.""")
 
-        joe = Partner.objects.get(pk=101)
+        # print(Partner.objects.all())
+        joe = Partner.objects.get(pk=100)
         self.assertEqual(joe.email, "joe@meyer.com")
         self.assertEqual(ContactDetail.objects.count(), 1)
         cd = ContactDetail.objects.all()[0]
