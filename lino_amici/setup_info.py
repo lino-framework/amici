@@ -14,26 +14,32 @@ SETUP_INFO = dict(
     description=("A Lino application for managing family contacts"),
     long_description="""\
 
-Lino Amici is a customizable Lino application for managing family
-contacts.  It is currently a submarine project, used only by its
-author and therefore poorly documented.
+Lino Amici is a ready-to-use `Lino <http://www.lino-framework.org>`__
+application for managing family contacts.
 
-- The central project homepage is http://amici.lino-framework.org
+- The central project homepage is https://amici.lino-framework.org
 
-- For *introductions* and *commercial information* about Lino Amici
-  please see `www.saffre-rumma.net
-  <http://www.saffre-rumma.net>`__.
+- This is an integral part of the Lino framework, which is documented
+  at https://www.lino-framework.org
+
+- The changelog is at https://www.lino-framework.org/changes
+
+- For introductions, commercial information and hosting solutions
+  see https://www.saffre-rumma.net
+
+- This is a sustainably free open-source project. Your contributions are
+  welcome.  See https://community.lino-framework.org for details.
 
 
 """,
     author='Luc Saffre',
     author_email='luc@lino-framework.org',
-    url="http://amici.lino-framework.org",
+    url="https://amici.lino-framework.org",
     license='BSD-2-Clause',
     classifiers="""\
 Programming Language :: Python
 Programming Language :: Python :: 3
-Development Status :: 4 - Beta
+Development Status :: 5 - Production/Stable
 Environment :: Web Environment
 Framework :: Django
 Intended Audience :: Developers

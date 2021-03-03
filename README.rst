@@ -5,15 +5,21 @@ The ``lino-amici`` package
 
 
 
-Lino Amici is a customizable Lino application for managing family
-contacts.  It is currently a submarine project, used only by its
-author and therefore poorly documented.
+Lino Amici is a ready-to-use `Lino <http://www.lino-framework.org>`__
+application for managing family contacts.
 
-- The central project homepage is http://amici.lino-framework.org
+- The central project homepage is https://amici.lino-framework.org
 
-- For *introductions* and *commercial information* about Lino Amici
-  please see `www.saffre-rumma.net
-  <http://www.saffre-rumma.net>`__.
+- This is an integral part of the Lino framework, which is documented
+  at https://www.lino-framework.org
+
+- The changelog is at https://www.lino-framework.org/changes
+
+- For introductions, commercial information and hosting solutions
+  see https://www.saffre-rumma.net
+
+- This is a sustainably free open-source project. Your contributions are
+  welcome.  See https://community.lino-framework.org for details.
 
 
 
