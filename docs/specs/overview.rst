@@ -20,9 +20,9 @@ Lino Amici Overview
 >>> print(analyzer.show_complexity_factors())
 ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE +REPORT_UDIFF
 - 37 plugins
-- 65 models
+- 66 models
 - 6 user types
-- 249 views
+- 250 views
 - 21 dialog actions
 <BLANKLINE>
 
