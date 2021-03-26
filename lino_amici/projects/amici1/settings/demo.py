@@ -11,7 +11,6 @@ class Site(Site):
     # is_demo_site = False
 
     # default_ui = 'lino.modlib.extjs'
-
     # default_ui = 'lino.modlib.bootstrap3'
     # default_user = 'anonymous'
 

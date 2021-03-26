@@ -12,6 +12,7 @@ from lino.modlib.comments.mixins import Commentable
 Partner.define_action(show_problems=dd.ShowSlaveTable(
     'checkdata.ProblemsByOwner', icon_name='bell', combo_group="checkdata"))
 
+
 class PartnerDetail(PartnerDetail):
 
     main = """
@@ -142,10 +143,12 @@ class PersonDetail(PersonDetail):
 
     main = "general #contact #career family more"
 
-    general = dd.Panel("""
+    general = dd.Panel("navigation_panel:20 general_box:60", label=_("General"))
+
+    general_box = """
     overview contact_box #phones.ContactDetailsByPartner
     contacts.RolesByPerson:30 lists.MembersByPartner:30 cal.EntriesByGuest:30
-    """, label=_("General"))
+    """
 
     contact_box = dd.Panel("""
     last_name first_name:15
