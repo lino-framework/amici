@@ -230,5 +230,5 @@ email
 gsm
 """
 Persons.react_responsive = False
-Persons.react_big_search = True
+#Persons.react_big_search = True
 Persons.column_names = 'last_name first_name *'
