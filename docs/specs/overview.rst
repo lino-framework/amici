@@ -23,7 +23,7 @@ Lino Amici Overview
 - 66 models
 - 6 user types
 - 250 views
-- 21 dialog actions
+- 22 dialog actions
 <BLANKLINE>
 
 
