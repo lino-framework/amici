@@ -123,13 +123,13 @@ class Site(Site):
         tb.add_action(self.models.households.Households)
         tb.add_action(self.models.contacts.Companies)
 
-        a = self.models.users.MySettings.default_action
-        tb.add_instance_action(
-            user, action=a, label=_("My settings"))
+        # a = self.models.users.MySettings.default_action
+        # tb.add_instance_action(
+        #     user, action=a, label=_("My settings"))
 
-        tb.add_action(
-            self.models.blogs.MyEntries.insert_action,
-            label=_("New blog entry"))
+        # tb.add_action(
+        #     self.models.blogs.MyEntries.insert_action,
+        #     label=_("New blog entry"))
 
 
 # the following line should not be active in a checked-in version
