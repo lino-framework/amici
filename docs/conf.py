@@ -10,25 +10,24 @@
 
 extensions = []
 extlinks = {}
+intersphinx_mapping = {}
 
 from lino.sphinxcontrib import configure
 #configure(globals())
 configure(globals(), 'lino_amici.projects.amici1.settings.demo')
 # configure(globals(), 'lino_book.projects.min1.settings.doctests')
 
-extlinks.update(ticket=('http://bugs.saffre-rumma.net/tickets/Ticket/%s', '#'))
+# extlinks.update(ticket=('https://jane.mylino.net/#/api/tickets/AllTickets/%s', '#'))
 
 extensions += ['lino.sphinxcontrib.logo']
 
 from django.conf import settings
 # settings.SITE.title = "Lino Amici"
 
-intersphinx_mapping = {}
 from atelier.sphinxconf import interproject
-interproject.configure(
-    globals(), 'atelier etgen lino_react')
-intersphinx_mapping['cg'] = ('https://community.lino-framework.org/', None)
-intersphinx_mapping['book'] = ('https://www.lino-framework.org/', None)
+interproject.configure(globals(), 'atelier etgen lino_react')
+# intersphinx_mapping['cg'] = ('https://community.lino-framework.org/', None)
+# intersphinx_mapping['book'] = ('https://www.lino-framework.org/', None)
 
 
 # General configuration
@@ -36,7 +35,7 @@ intersphinx_mapping['book'] = ('https://www.lino-framework.org/', None)
 
 # General information about the project.
 project = "Lino Amici"
-copyright = '2014-2020 Rumma & Ko Ltd'
+copyright = '2014-2021 Rumma & Ko Ltd'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
