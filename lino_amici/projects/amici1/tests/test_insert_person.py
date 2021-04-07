@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2017-2021 Rumma & Ko Ltd
-# License: BSD (see file COPYING for details)
+# License: GNU Affero General Public License v3 (see file COPYING for details)
 
 """Test whether :ticket:`2148` is fixed (Cannot insert person with
 nonempty email in Amici (lino_xl.lib.phones))
