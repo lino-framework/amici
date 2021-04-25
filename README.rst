@@ -2,7 +2,7 @@
 The ``lino-amici`` package
 ==========================
 
-
+Warning: This repository has moved to https://gitlab.com/lino-framework/amici
 
 
 Lino Amici is a ready-to-use `Lino <http://www.lino-framework.org>`__
